@@ -1,8 +1,14 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">
-            <ng-icon name="ionCarSportSharp" style="padding-right: 25px;" ></ng-icon> 
-             My Vehicle
+            <div class="row">
+                <div class="col" style="padding-top: 10px;">
+                    <ng-icon name="ionCarSportSharp" style="color: rgb(255, 60, 0); font-size: x-large;"></ng-icon> 
+                </div>
+                <div class="col" style="padding-top: 17px;">
+                    <p style="color: rgb(255, 60, 0);">My Vehicle</p>
+                </div>
+            </div>
         </a>
         <p style="padding-right: 20px; padding-top: 12px;">|</p>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -13,25 +19,24 @@
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#">Home</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">My Cars</a>
+          <li class="nav-item" routerLinkActive="active">
+            <a class="nav-link" routerLink="/myCars">My Cars</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Gallery</a>
+          <li class="nav-item" routerLinkActive="active">
+            <a class="nav-link" routerLink="/carGallery">Gallery</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Brand Favorites</a>
+          <li class="nav-item" routerLinkActive="active">
+            <a class="nav-link" routerLink="/brandFavorites">Brand Favorites</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Authenticate</a>
+          <li class="nav-item" routerLinkActive="active">
+            <a class="nav-link" routerLink="/auth">Authenticate</a>
           </li>
         </ul>
-
-        <li class="nav-item dropdown d-flex">
-
-            <a class="nav-link" href="#" style="padding-right: 25px;">Contact</a>
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropdown
+        <li class="nav-item dropdown d-flex" style="padding-top: 15px;">
+            <app-night-mode style="padding-right: 25px;"></app-night-mode>
+            <a class="nav-link" routerLinkActive="active" routerLink="/contact" style="padding-right: 25px; color: rgb(255, 60, 0);">Contact</a>
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: rgb(255, 60, 0);">
+              Settings
             </a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="#">Action</a></li>

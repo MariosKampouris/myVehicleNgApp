@@ -1,0 +1,11 @@
+.background-image {
+    background-image: url("../../assets/homeAssets/porschewide.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 90vh;
+    text-align:center;
+    margin: auto;
+    padding: 0;
+    filter: brightness(60%);
+}

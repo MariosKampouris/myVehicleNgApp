@@ -13,6 +13,7 @@ import { CarGalleryComponent } from './car-gallery/car-gallery.component';
 import { ContactComponent } from './contact/contact.component';
 import { BrandFavoritesComponent } from './brand-favorites/brand-favorites.component';
 import { HomeComponent } from './home/home.component';
+import { NightModeComponent } from './night-mode/night-mode.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { HomeComponent } from './home/home.component';
     ContactComponent,
     BrandFavoritesComponent,
     HomeComponent,
+    NightModeComponent,
   ],
   imports: [
     BrowserModule,
