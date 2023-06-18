@@ -1,1 +1,29 @@
-<p>auth works!</p>
+<div class="row" style="height: 100vh;">
+    <div class="col">
+    </div>
+    <div class="col" style="padding-top: 5vh;">
+        <form>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" class="form-control" ngModel name="email" required email>
+            </div>
+            <div class="form-group" style="padding-top: 2vh;">
+                <label for="password">Password</label>
+                <input type="password" id="password" class="form-control" ngModel name="password" required minlength="6">
+            </div>
+            <div style="padding-top: 5vh; text-align: center;">
+                <button class="mainbtn mainbtn-primary" style="width: 16vh;" type="submit">Login</button> |
+                <button class="mainbtn mainbtn-primary" style="width: 16vh;" type="button">Sign Up</button>
+            </div>
+        </form>
+    </div>
+    <div class="col">
+    </div>    
+    <!--<div class="alert alert-danger" *ngIf="error">
+        <p>{{error}}</p>
+    </div>-->
+    <!--<app-alert [message]="error" *ngIf="error" (close)="onHandleError()"></app-alert>-->
+    <!--<div *ngIf="isLoading" style="text-align: center;">
+        <app-loading-spinner></app-loading-spinner> 
+    </div>-->
+</div>

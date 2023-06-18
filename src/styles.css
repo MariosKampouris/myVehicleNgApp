@@ -1,1 +1,57 @@
 /* You can add global styles to this file, and also import other style files */
+:root{
+    --color-bg: #1d1d1d;
+    --color-bg-variant: #333333;
+    --color-primary: rgb(255, 60, 0);
+    /*--color-primary-variant: rgba(38, 255, 175, 0.4);*/
+    --color-white: #fff;
+    --color-light: rgba(255, 255, 255, 0.6);
+
+    --transition : all 400ms ease;
+}
+
+.bodyMain{
+    background: var(--color-bg-variant);
+    color: var(--color-white);
+}
+
+html,
+body {
+    scroll-behavior: smooth;
+    margin: 0px;
+    height: 100%;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+.mainbtn {
+    width: 15vh;
+    display: inline-block;
+    color: var(--color-primary);
+    padding: 0.45rem 1.2rem;
+    border-radius: 1.5rem;
+    cursor: pointer;
+    border: 1px solid var(--color-primary);
+    transition: var(--transition);
+}
+
+.mainbtn-primary {
+    background: var(--color-primary);
+    color: var(--color-bg);
+}
+
+.mainbtn:hover{
+    background: var(--color-white);
+    color: var(--color-bg);
+    border-color: transparent;
+}
+
+.mainheader{
+    color: var(--color-primary);
+}
+
+.mainheader:hover{
+    transform: scale(1.05);
+}

@@ -1,5 +1,5 @@
 .background-image {
-    background-image: url("../../assets/homeAssets/porschewide.jpg");
+    background-image: url("../../assets/homeAssets/porschewidedarker.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -7,5 +7,9 @@
     text-align:center;
     margin: auto;
     padding: 0;
-    filter: brightness(60%);
+    /*filter: brightness(100%);*/
+}
+
+.mainparagraph{
+    font-size: 10px;
 }
