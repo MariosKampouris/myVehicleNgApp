@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./auth.component.css']
 })
 export class AuthComponent {
+  signUp: boolean = false;
 
+  changeToSignup(){
+    this.signUp = true;
+  }
+
+  changeToLogin(){
+    this.signUp = false;
+  }
 }

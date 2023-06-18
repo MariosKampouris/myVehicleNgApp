@@ -3,17 +3,39 @@
     </div>
     <div class="col" style="padding-top: 5vh;">
         <form>
-            <div class="form-group">
+            <!--<div class="form-group" style="padding-top: 2vh;" *ngIf="signUp">
+                <label for="username">Username</label>
+                <input type="username" id="username" class="form-control" ngModel name="username" required>
+            </div>
+            <div class="form-group" style="padding-top: 2vh;">
                 <label for="email">Email</label>
                 <input type="email" id="email" class="form-control" ngModel name="email" required email>
             </div>
             <div class="form-group" style="padding-top: 2vh;">
                 <label for="password">Password</label>
                 <input type="password" id="password" class="form-control" ngModel name="password" required minlength="6">
+            </div>-->
+            <div class="input-container" style="margin-top: 2vh;" *ngIf="signUp">
+                <input placeholder="Username" class="input-field" type="text" id="username" ngModel name="username" required autocomplete="off">
+                <label for="username" class="input-label">Username</label>
+                <span class="input-highlight"></span>
             </div>
+            <div class="input-container" style="margin-top: 5vh;">
+                <input placeholder="Email" class="input-field" type="email" id="email" ngModel name="email" required email autocomplete="off">
+                <label for="email" class="input-label">Email</label>
+                <span class="input-highlight"></span>
+            </div>
+            <div class="input-container" style="margin-top: 5vh;">
+                <input placeholder="Password" id="password" class="input-field" type="password" ngModel name="password" required minlength="6" autocomplete="off">
+                <label for="password" class="input-label">Password</label>
+                <span class="input-highlight"></span>
+            </div>
+              
             <div style="padding-top: 5vh; text-align: center;">
-                <button class="mainbtn mainbtn-primary" style="width: 16vh;" type="submit">Login</button> |
-                <button class="mainbtn mainbtn-primary" style="width: 16vh;" type="button">Sign Up</button>
+                <button class="mainbtn mainbtn-primary" style="width: 25vh;" type="submit" *ngIf="!signUp">Login</button> 
+                <button class="mainbtn mainbtn-primary" style="width: 25vh;" type="submit" *ngIf="signUp">Sign Up</button> |
+                <button class="mainbtn mainbtn-primary" style="width: 25vh;" type="button" (click)="changeToSignup()"  *ngIf="!signUp">Create Account</button>
+                <button class="mainbtn mainbtn-primary" style="width: 25vh;" type="button" (click)="changeToLogin()" *ngIf="signUp">Back to Login</button>
             </div>
         </form>
     </div>
