@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgIconsModule } from '@ng-icons/core';
 import { ionCarSportSharp } from '@ng-icons/ionicons';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -31,6 +33,8 @@ import { NightModeComponent } from './night-mode/night-mode.component';
     BrowserModule,
     AppRoutingModule,
     NgIconsModule.withIcons({ ionCarSportSharp }),
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

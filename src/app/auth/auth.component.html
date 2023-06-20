@@ -2,19 +2,7 @@
     <div class="col">
     </div>
     <div class="col" style="padding-top: 5vh;">
-        <form>
-            <!--<div class="form-group" style="padding-top: 2vh;" *ngIf="signUp">
-                <label for="username">Username</label>
-                <input type="username" id="username" class="form-control" ngModel name="username" required>
-            </div>
-            <div class="form-group" style="padding-top: 2vh;">
-                <label for="email">Email</label>
-                <input type="email" id="email" class="form-control" ngModel name="email" required email>
-            </div>
-            <div class="form-group" style="padding-top: 2vh;">
-                <label for="password">Password</label>
-                <input type="password" id="password" class="form-control" ngModel name="password" required minlength="6">
-            </div>-->
+        <form #authForm="ngForm" (ngSubmit)="onSubmit(authForm)" *ngIf="!isLoading">
             <div class="input-container" style="margin-top: 2vh;" *ngIf="signUp">
                 <input placeholder="Username" class="input-field" type="text" id="username" ngModel name="username" required autocomplete="off">
                 <label for="username" class="input-label">Username</label>
@@ -32,8 +20,8 @@
             </div>
               
             <div style="padding-top: 5vh; text-align: center;">
-                <button class="mainbtn mainbtn-primary" style="width: 25vh;" type="submit" *ngIf="!signUp">Login</button> 
-                <button class="mainbtn mainbtn-primary" style="width: 25vh;" type="submit" *ngIf="signUp">Sign Up</button> |
+                <button class="mainbtn mainbtn-primary" style="width: 25vh;" type="submit" *ngIf="!signUp" [disabled]="!authForm.valid">Login</button> 
+                <button class="mainbtn mainbtn-primary" style="width: 25vh;" type="submit" *ngIf="signUp" [disabled]="!authForm.valid">Sign Up</button> |
                 <button class="mainbtn mainbtn-primary" style="width: 25vh;" type="button" (click)="changeToSignup()"  *ngIf="!signUp">Create Account</button>
                 <button class="mainbtn mainbtn-primary" style="width: 25vh;" type="button" (click)="changeToLogin()" *ngIf="signUp">Back to Login</button>
             </div>
@@ -41,11 +29,4 @@
     </div>
     <div class="col">
     </div>    
-    <!--<div class="alert alert-danger" *ngIf="error">
-        <p>{{error}}</p>
-    </div>-->
-    <!--<app-alert [message]="error" *ngIf="error" (close)="onHandleError()"></app-alert>-->
-    <!--<div *ngIf="isLoading" style="text-align: center;">
-        <app-loading-spinner></app-loading-spinner> 
-    </div>-->
 </div>
