@@ -2,6 +2,10 @@
     <div class="col">
     </div>
     <div class="col" style="padding-top: 5vh;">
+        <!--Error div-->
+        <div class="alert alert-danger" *ngIf="error">
+            <p>{{error}}</p>
+        </div>
         <form #authForm="ngForm" (ngSubmit)="onSubmit(authForm)" *ngIf="!isLoading">
             <div class="input-container" style="margin-top: 2vh;" *ngIf="signUp">
                 <input placeholder="Username" class="input-field" type="text" id="username" ngModel name="username" required autocomplete="off">
@@ -18,7 +22,6 @@
                 <label for="password" class="input-label">Password</label>
                 <span class="input-highlight"></span>
             </div>
-              
             <div style="padding-top: 5vh; text-align: center;">
                 <button class="mainbtn mainbtn-primary" style="width: 25vh;" type="submit" *ngIf="!signUp" [disabled]="!authForm.valid">Login</button> 
                 <button class="mainbtn mainbtn-primary" style="width: 25vh;" type="submit" *ngIf="signUp" [disabled]="!authForm.valid">Sign Up</button> |

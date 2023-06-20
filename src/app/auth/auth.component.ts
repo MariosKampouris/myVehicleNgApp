@@ -69,9 +69,11 @@ export class AuthComponent {
 
   changeToSignup(){
     this.signUp = true;
+    this.onHandleError();
   }
 
   changeToLogin(){
     this.signUp = false;
+    this.onHandleError();
   }
 }

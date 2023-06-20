@@ -33,16 +33,17 @@
           </li>
         </ul>
         <li class="nav-item dropdown d-flex" style="padding-top: 15px;">
-            <app-night-mode style="padding-right: 25px;"></app-night-mode>
-            <a class="nav-link" routerLinkActive="active" routerLink="/contact" style="padding-right: 25px; color: rgb(255, 60, 0);">Contact</a>
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: rgb(255, 60, 0);">
+          <app-night-mode style="padding-right: 25px;"></app-night-mode>
+          <a class="nav-link" style="padding-right: 25px; color: rgb(255, 60, 0); cursor: pointer;" (click)="onLogout()">Logout</a>
+          <a class="nav-link" routerLinkActive="active" routerLink="/contact" style="padding-right: 25px; color: rgb(255, 60, 0);">Contact</a>
+            <a class="nav-link dropdown-toggle" style="cursor: pointer;" id="navbarDropdownMenuLink" mdbDropdownToggle role="button" data-bs-toggle="dropdown" style="color: rgb(255, 60, 0);">
               Settings
             </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" style="cursor: pointer;">Action</a></li>
+              <li><a class="dropdown-item" style="cursor: pointer;">Another action</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <li><a class="dropdown-item" style="cursor: pointer;">Logout</a></li>
             </ul>
           </li>
       </div>
