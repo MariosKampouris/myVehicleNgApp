@@ -16,6 +16,9 @@ import { ContactComponent } from './contact/contact.component';
 import { BrandFavoritesComponent } from './brand-favorites/brand-favorites.component';
 import { HomeComponent } from './home/home.component';
 import { NightModeComponent } from './night-mode/night-mode.component';
+import { MyCarsListComponent } from './my-cars/my-cars-list/my-cars-list.component';
+import { MyCarsItemComponent } from './my-cars/my-cars-list/my-cars-item/my-cars-item.component';
+import { myCarsService } from './my-cars/my-cars.service';
 
 @NgModule({
   declarations: [
@@ -28,6 +31,8 @@ import { NightModeComponent } from './night-mode/night-mode.component';
     BrandFavoritesComponent,
     HomeComponent,
     NightModeComponent,
+    MyCarsListComponent,
+    MyCarsItemComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +41,7 @@ import { NightModeComponent } from './night-mode/night-mode.component';
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [myCarsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
