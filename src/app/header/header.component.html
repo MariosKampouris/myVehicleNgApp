@@ -33,7 +33,6 @@
           </li>
         </ul>
         <li class="nav-item dropdown d-flex" style="padding-top: 15px;">
-          <app-night-mode style="padding-right: 25px;"></app-night-mode>
           <a class="nav-link" style="padding-right: 25px; color: rgb(255, 60, 0); cursor: pointer;" (click)="onLogout()">Logout</a>
           <a class="nav-link" routerLinkActive="active" routerLink="/contact" style="padding-right: 25px; color: rgb(255, 60, 0);" *ngIf="isAuthenticated">Contact</a>
             <a class="nav-link dropdown-toggle" style="cursor: pointer;" id="navbarDropdownMenuLink" mdbDropdownToggle role="button" data-bs-toggle="dropdown" style="color: rgb(255, 60, 0);">
